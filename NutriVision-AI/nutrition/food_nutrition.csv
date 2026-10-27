@@ -1,0 +1,135 @@
+food_id,food_name,aliases,model_labels,category,diet_type,serving_label,serving_grams,calories_kcal,protein_g,fat_g,carbs_g,fiber_g,sugar_g,sodium_mg,tags,note
+1,Steamed white rice,cooked rice|plain rice|white rice|rice|chawal,,Cereals & grains,vegan,1 katori (150 g),150,130,2.7,0.3,28.2,0.4,0.1,1,refined,Values for cooked rice; polished rice loses most fibre and micronutrients
+2,Steamed brown rice,brown rice|unpolished rice,,Cereals & grains,vegan,1 katori (150 g),150,123,2.7,1.0,25.6,1.8,0.4,4,wholegrain,Wholegrain rice - higher fibre and slightly lower glycaemic impact
+3,Chapati (whole wheat no ghee),chapati|roti|phulka|wheat roti|chapathi|whole wheat roti,,Cereals & grains,vegan,1 chapati (40 g),40,240,8.5,3.5,44.0,6.5,2.0,180,wholegrain,Whole wheat atta without added fat; 1 chapati is about 40 g
+4,Chapati (whole wheat with ghee),wheat roti with ghee|ghee roti,,Cereals & grains,vegetarian,1 chapati (40 g),40,300,8.0,9.0,44.0,6.0,2.0,190,wholegrain,About 5 g ghee added per chapati
+5,Paratha (plain pan-fried),paratha|parantha|plain paratha,,Cereals & grains,vegetarian,1 paratha (70 g),70,330,6.5,14.0,43.0,4.5,2.5,320,fried|wholegrain,Pan-fried in oil or ghee; fat content varies widely with the cook
+6,Aloo paratha,potato paratha|aloo ka paratha,,Cereals & grains,vegetarian,1 paratha (110 g),110,300,5.5,12.0,41.0,3.8,3.0,340,fried|wholegrain,Stuffed potato paratha - portion weight includes the filling
+7,Poori (deep-fried),puri|poori|deep fried puri,,Cereals & grains,vegan,1 poori (30 g),30,420,6.0,22.0,49.0,4.0,1.5,200,fried,Deep-fried wheat bread - energy density is high
+8,Naan (refined flour with butter),naan|butter naan,,Cereals & grains,vegetarian,1 naan (90 g),90,320,8.0,8.5,52.0,2.0,3.5,420,refined|processed,Restaurant naan with butter; refined flour and often high salt
+9,Bhatura,bhatoora|bhature,,Cereals & grains,vegetarian,1 bhatura (80 g),80,400,7.0,18.0,52.0,2.5,2.0,380,fried|refined,Deep-fried leavened bread usually eaten with chole
+10,Poha (flattened rice with peanuts),poha|pohe|aval|beaten rice,,Cereals & grains,vegan,1 katori (150 g),150,180,3.5,5.0,30.0,2.2,2.0,300,wholegrain|snack,Flattened rice tempered with peanuts and vegetables
+11,Upma (semolina),upma|uppma|rava upma,,Cereals & grains,vegetarian,1 katori (150 g),150,160,3.5,5.5,24.0,2.0,1.5,330,refined,Semolina tempered with vegetables in oil
+12,Idli (steamed),idli|idly|steamed idli,,Cereals & grains,vegan,1 idli (40 g),40,130,4.0,0.6,26.0,1.2,0.4,190,,Fermented steamed rice-lentil cake; low fat and low salt
+13,Dosa (plain),dosa|dose|plain dosa,,Cereals & grains,vegan,1 dosa (90 g),90,170,4.0,3.5,29.0,1.5,0.6,220,,Fermented rice-lentil crepe cooked on a griddle
+14,Masala dosa,masala dose|potato dosa,,Cereals & grains,vegan,1 dosa (150 g),150,190,4.0,6.0,29.0,2.2,1.0,300,,Dosa with potato masala filling
+15,Uttapam,uttapa|uttapam|thick dosa,,Cereals & grains,vegan,1 uttapam (120 g),120,160,4.5,4.0,26.0,1.8,1.2,280,,Thicker dosa with vegetables cooked into the batter
+16,Khichdi (dal + rice),khichdi|khichri,,Cereals & grains,vegetarian,1 katori (200 g),200,130,4.5,2.5,22.0,2.0,0.7,250,legume,Comfort dish of rice and lentils; often finished with ghee
+17,Vegetable pulao,veg pulao|pulao|pilaf,,Cereals & grains,vegetarian,1 katori (150 g),150,160,3.5,5.0,25.0,2.0,1.5,320,,Rice cooked with vegetables and oil
+18,Chicken biryani,chicken biriyani|murgh biryani,,Cereals & grains,non_vegetarian,1 katori (200 g),200,200,9.0,7.0,25.0,1.5,1.5,420,,Layered rice with chicken; fat and salt vary by recipe
+19,Vegetable biryani,veg biryani|vegetable biriyani,,Cereals & grains,vegetarian,1 katori (200 g),200,180,4.5,6.0,27.0,2.2,2.0,400,,Rice with vegetables and spices
+20,Curd rice,thayir sadam|dahi rice,,Cereals & grains,vegetarian,1 katori (200 g),200,140,3.5,4.0,22.0,0.8,3.0,250,,Rice mixed with curd and tempered spices
+21,Lemon rice,chitranna|nimmakaya pulihora,,Cereals & grains,vegan,1 katori (150 g),150,150,2.8,5.0,24.0,1.2,0.8,300,,Tempered rice with lemon and peanuts
+22,Appam,appam|palappam,,Cereals & grains,vegan,1 appam (60 g),60,120,2.0,2.0,23.0,1.0,1.0,150,,Fermented rice pancake from South India
+23,Ragi mudde,finger millet ball|ragi ball,,Cereals & grains,vegan,1 ball (100 g),100,130,3.0,0.8,28.0,3.5,0.5,,wholegrain,Millet staple of Karnataka; high fibre and calcium
+24,Bread (white refined),bread|white bread|slice of bread,bread pudding,Cereals & grains,vegan,1 slice (30 g),30,265,8.5,3.2,49.0,2.7,5.0,490,refined|processed,Standard white sandwich bread
+25,Garlic bread (toasted with butter),garlic bread|toast|bruschetta,bruschetta,Cereals & grains,vegetarian,2 slices (80 g),80,350,8.0,14.0,47.0,2.5,4.0,600,refined|processed,Toasted bread with butter and garlic
+26,Oats (cooked with water),oats|oatmeal|porridge,,Cereals & grains,vegan,1 katori (200 g),200,70,2.5,1.4,12.0,1.7,0.5,4,wholegrain,Cooked in water - adding milk increases calories and protein
+27,Dal toor (cooked),toor dal|arhar dal|dal|dhal|yellow dal|pigeon pea dal,,Pulses & legumes,vegan,1 katori (150 g),150,120,7.0,0.8,20.0,4.5,1.0,180,legume,Everyday yellow dal; values for the cooked lentil with light tempering
+28,Dal moong (cooked),moong dal|mung dal|green gram dal|yellow moong,,Pulses & legumes,vegan,1 katori (150 g),150,105,6.5,0.6,17.0,3.5,0.8,170,legume,Easy-to-digest lentil; light on the stomach
+29,Dal masoor (cooked),masoor dal|red lentil dal|musur dal,,Pulses & legumes,vegan,1 katori (150 g),150,110,7.5,0.5,18.0,4.0,0.6,170,legume,Red lentil dal - high protein for a plant food
+30,Dal chana (cooked),chana dal|bengal gram dal|split chickpea dal,,Pulses & legumes,vegan,1 katori (150 g),150,130,7.5,2.5,20.0,5.0,0.8,190,legume,Bengal gram dal with a firmer texture
+31,Chole (chana masala),chole|chana masala|chickpea curry|cholay,,Pulses & legumes,vegan,1 katori (150 g),150,190,8.0,6.0,26.0,7.0,2.0,420,legume,Chickpea curry; salt content depends on the masala used
+32,Rajma (kidney bean curry),rajma|kidney beans curry|red kidney beans,,Pulses & legumes,vegan,1 katori (150 g),150,150,7.0,4.0,22.0,6.5,1.5,380,legume,Kidney bean curry - good fibre and plant protein
+33,Dal makhani,dal makhani|makhani dal|black dal,,Pulses & legumes,vegetarian,1 katori (150 g),150,200,6.5,11.0,18.0,4.5,2.0,450,legume|fried,Lentils enriched with butter and cream
+34,Sambar,sambhar|sambar|sambhar dal,,Pulses & legumes,vegan,1 katori (150 g),150,60,2.5,1.8,8.0,2.0,1.5,350,legume,South Indian lentil and vegetable stew
+35,Rasam,rasam|tomato rasam|saaru,,Pulses & legumes,vegan,1 katori (150 g),150,35,1.2,0.8,5.0,0.8,1.0,400,legume,Thin peppery lentil broth - very low calorie
+36,Kadhi (besan and curd),kadhi|kadhi pakora|gujarati kadhi,,Pulses & legumes,vegetarian,1 katori (150 g),150,120,4.0,6.5,11.0,1.0,4.0,420,,Yoghurt and gram flour curry
+37,Moong sprouts (raw),sprouts|sprouted moong|ankurit moong,,Pulses & legumes,vegan,1 katori (100 g),100,100,8.0,1.0,15.0,4.5,1.5,,legume|raw,Sprouted mung beans - eaten raw or lightly cooked
+38,Chana chaat (boiled),chana chaat|boiled chana|chickpea salad,,Pulses & legumes,vegan,1 katori (150 g),150,150,7.5,2.0,24.0,7.0,2.5,400,legume,Salt and lemon dressed boiled chickpeas
+39,Paneer (full fat raw),paneer|cottage cheese|full fat paneer,,Dairy & paneer,vegetarian,100 g,100,296,18.0,22.0,6.0,0.0,3.5,30,,Fresh Indian cheese - high protein but also high saturated fat
+40,Paneer (low fat),low fat paneer|skim milk paneer,,Dairy & paneer,vegetarian,100 g,100,200,22.0,12.0,5.0,0.0,3.0,40,,Made from toned milk - better protein-to-fat ratio
+41,Paneer butter masala,paneer makhani|paneer butter masala,,Dairy & paneer,vegetarian,1 katori (150 g),150,230,8.0,18.0,9.0,1.5,4.5,520,,Rich tomato butter gravy with paneer
+42,Palak paneer,palak paneer|spinach paneer,,Dairy & paneer,vegetarian,1 katori (150 g),150,190,7.5,14.0,7.0,3.0,2.5,480,leafy,Spinach gravy with paneer; good iron and calcium sources
+43,Shahi paneer,shahi paneer|royal paneer curry,,Dairy & paneer,vegetarian,1 katori (150 g),150,240,8.0,18.0,11.0,1.5,5.0,520,,Creamy cashew-based paneer curry
+44,Curd (dahi whole milk),curd|dahi|yoghurt|yogurt,,Dairy & paneer,vegetarian,1 katori (150 g),150,60,3.1,3.3,4.7,0.0,4.7,40,natural_sugar,Whole milk yoghurt; a good source of calcium and probiotics
+45,Raita,raita|boondi raita|cucumber raita,,Dairy & paneer,vegetarian,1 katori (150 g),150,70,3.0,3.0,6.0,0.6,4.5,220,,Curd with vegetables and spices
+46,Lassi (sweet),lassi|sweet lassi|mango lassi,,Dairy & paneer,vegetarian,1 glass (200 ml),200,90,3.0,2.5,13.0,0.0,12.0,50,beverage|high_sugar,Sweetened yoghurt drink - the sugar adds up quickly
+47,Chaas (buttermilk),chaas|buttermilk|mor|spiced buttermilk,,Dairy & paneer,vegetarian,1 glass (200 ml),200,30,1.5,0.8,3.5,0.0,3.0,120,beverage|natural_sugar,Thin spiced buttermilk - low calorie
+48,Milk (whole),milk|whole milk|doodh,,Dairy & paneer,vegetarian,1 glass (200 ml),200,65,3.2,3.6,4.6,0.0,4.6,45,beverage|natural_sugar,Full fat milk; toned milk is around 47 kcal per 100 ml
+49,Ghee,ghee|clarified butter|desi ghee,,Fats & oils,vegetarian,1 tsp (5 g),5,900,0.0,100.0,0.0,0.0,0.0,0,,Pure fat - use measured quantities
+50,Butter,butter|makhan|salted butter,,Fats & oils,vegetarian,1 tsp (5 g),5,720,0.5,81.0,0.5,0.0,0.5,11,,Salted butter
+51,Cheese slice (processed),cheese|processed cheese slice|cheese slice,,Dairy & paneer,vegetarian,1 slice (20 g),20,350,20.0,26.0,2.5,0.0,1.5,1200,processed,Processed cheese is very high in sodium
+52,Cooking oil,oil|sunflower oil|refined oil|mustard oil,,Fats & oils,vegan,1 tsp (5 g),5,900,0.0,100.0,0.0,0.0,0.0,0,,Any refined or cold-pressed cooking oil
+53,Mixed vegetable sabzi,mixed veg|mixed vegetable|veg sabzi|sabji|mixed veg curry,,Vegetable dishes,vegan,1 katori (150 g),150,95,2.5,5.0,10.0,3.5,4.0,380,,Seasonal vegetables cooked with oil and spices
+54,Aloo gobi,aloo gobi|potato cauliflower|gobi aloo,,Vegetable dishes,vegan,1 katori (150 g),150,120,2.5,6.0,14.0,3.0,3.0,360,,Dry potato and cauliflower curry
+55,Bhindi masala,bhindi|okra masala|lady finger curry,,Vegetable dishes,vegan,1 katori (150 g),150,110,2.0,6.5,10.0,4.0,3.0,380,,Okra cooked with onion and spices
+56,Baingan bharta,baingan bharta|roasted eggplant mash|brinjal bharta,,Vegetable dishes,vegan,1 katori (150 g),150,100,1.8,6.0,9.0,3.5,4.5,360,,Roasted aubergine mashed with onion and tomato
+57,Lauki sabzi,bottle gourd curry|lauki|dudhi sabzi|ghiya,,Vegetable dishes,vegan,1 katori (150 g),150,60,1.2,3.5,6.0,1.5,3.0,340,,Light bottle gourd curry
+58,Cabbage sabzi,patta gobi|cabbage curry|cabbage sabzi,,Vegetable dishes,vegan,1 katori (150 g),150,80,1.8,4.5,8.0,2.5,3.5,340,,Cabbage with mustard seeds and turmeric
+59,Spinach sabzi,palak sabzi|spinach curry|palak sabzi,,Vegetable dishes,vegan,1 katori (150 g),150,90,2.5,5.0,7.0,3.0,1.5,360,leafy,Leafy green - useful iron folate and vitamin A
+60,Methi sabzi,methi|fenugreek leaves sabzi|menthi kura,,Vegetable dishes,vegan,1 katori (150 g),150,85,2.8,4.5,7.0,3.2,1.5,350,leafy,Fenugreek leaves with a slightly bitter taste
+61,Aloo matar,aloo matar|potato peas curry|matar aloo,,Vegetable dishes,vegan,1 katori (150 g),150,130,3.0,6.0,16.0,3.5,3.5,370,,Potato and green pea curry
+62,Salad (cucumber tomato onion),salad|kachumber|green salad,,Vegetable dishes,vegan,1 bowl (150 g),150,25,1.0,0.3,5.0,1.5,3.0,15,raw|natural_sugar,No dressing included; dressings and salt change the picture
+63,Cucumber,cucumber|kheera|kakdi,,Fruits & raw foods,vegan,1 cup (100 g),100,15,0.7,0.1,3.6,0.5,1.7,2,raw|vegetable|natural_sugar,Mostly water - very low calorie
+64,Tomato,tomato|tamatar,,Fruits & raw foods,vegan,1 medium (100 g),100,18,0.9,0.2,3.9,1.2,2.6,5,raw|vegetable|natural_sugar,Lycopene rich
+65,Chicken breast (grilled skinless),grilled chicken|chicken breast|skinless chicken,,Meat & fish,non_vegetarian,100 g,100,165,31.0,3.6,0.0,0.0,0.0,74,high_protein,Lean cut - one of the best protein-to-calorie ratios
+66,Chicken curry (home-style),chicken curry|murgh curry|chicken gravy,chicken_curry,Meat & fish,non_vegetarian,1 katori (150 g),150,150,13.0,9.0,4.0,0.8,2.0,420,,Chicken cooked in an onion-tomato gravy
+67,Butter chicken,butter chicken|murgh makhani|makhani chicken,,Meat & fish,non_vegetarian,1 katori (150 g),150,200,12.0,14.0,6.0,0.7,3.5,520,,Rich gravy with butter and cream
+68,Tandoori chicken,tandoori chicken|grilled tandoori chicken,,Meat & fish,non_vegetarian,100 g,100,190,25.0,9.0,2.0,0.0,1.0,480,high_protein,Clay-oven chicken; marinade adds salt
+69,Chicken wings (fried),chicken wings|fried wings|wings,chicken_wings,Meat & fish,non_vegetarian,4 pieces (120 g),120,290,22.0,20.0,8.0,0.3,0.5,700,fried,Deep-fried wings with a batter coating
+70,Chicken tikka,chicken tikka|tikka|chicken tikka pieces,,Meat & fish,non_vegetarian,100 g,100,190,24.0,10.0,3.0,0.4,1.0,500,high_protein,Marinated boneless chicken pieces
+71,Egg (boiled),egg|boiled egg|hard boiled egg,deviled_eggs,Egg dishes,eggetarian,1 egg (50 g),50,155,13.0,10.6,1.1,0.0,1.1,124,high_protein,Whole boiled egg - complete protein and healthy fats
+72,Egg curry,egg curry|anda curry|egg masala,,Egg dishes,eggetarian,1 katori (150 g),150,140,8.0,9.0,5.0,0.9,2.0,400,,Boiled eggs simmered in a spiced gravy
+73,Omelette (2 eggs with oil),omelette|omelet|egg omelette,,Egg dishes,eggetarian,1 omelette (120 g),120,190,12.0,14.0,1.5,0.0,1.0,350,high_protein,Eggs pan-fried in a little oil
+74,Fish curry (South Indian),fish curry|machli curry|meen kuzhambu,,Meat & fish,non_vegetarian,1 katori (150 g),150,130,14.0,7.0,3.0,0.6,1.5,420,,Fish simmered in coconut or tamarind gravy
+75,Fish (grilled or baked),grilled fish|baked fish|fish fillet,grilled_salmon,Meat & fish,non_vegetarian,100 g,100,200,22.0,12.0,0.0,0.0,0.0,90,high_protein,Oil content depends heavily on the fish species
+76,Mutton curry,mutton curry|rogan josh|goat curry,,Meat & fish,non_vegetarian,1 katori (150 g),150,230,18.0,16.0,4.0,0.8,1.5,480,,Red meat curry - higher fat than chicken
+77,Prawn curry,prawn curry|shrimp curry|jhinga curry,,Meat & fish,non_vegetarian,1 katori (150 g),150,120,13.0,6.0,4.0,0.5,1.2,450,,Prawns in a spiced gravy
+78,Burger (chicken),burger|chicken burger|hamburger,hamburger,Meat & fish,non_vegetarian,1 burger (150 g),150,280,14.0,13.0,28.0,2.0,5.5,600,processed,Fast-food style burger with sauce and bun
+79,Hot dog,hot dog|hotdog|sausage roll,hot_dog,Meat & fish,non_vegetarian,1 hot dog (120 g),120,290,11.0,17.0,24.0,1.0,6.0,800,processed|high_sodium,Processed sausage in a bun - very high sodium
+80,Club sandwich,club sandwich|triple decker sandwich,club_sandwich,Snacks & street food,non_vegetarian,1 sandwich (180 g),180,220,10.0,9.0,25.0,2.5,3.5,600,processed,Toast with egg chicken and mayonnaise
+81,Sushi (fish or veg rolls),sushi|maki roll,sushi,Snacks & street food,non_vegetarian,6 pieces (180 g),180,150,6.0,2.5,26.0,1.0,4.0,450,,Vinegared rice with fish or vegetables
+82,Samosa (fried),samosa|samoosa|fried samosa,samosa,Snacks & street food,vegan,1 samosa (60 g),60,262,4.5,14.5,30.0,2.4,1.6,420,fried|snack,Deep-fried potato-filled pastry
+83,Onion pakora (bhajiya),pakora|bhajiya|onion bhaji|fritters,onion_rings,Snacks & street food,vegan,4 pieces (80 g),80,315,7.0,18.0,32.0,3.5,2.5,500,fried|snack,Deep-fried gram flour fritters - absorbs a lot of oil
+84,Medu vada,vada|medu vada|urad dal vada,,Snacks & street food,vegan,1 vada (40 g),40,250,7.5,13.0,27.0,3.0,1.0,400,fried|snack,Fermented lentil doughnut
+85,Dhokla (steamed),dhokla|khaman dhokla,,Snacks & street food,vegan,2 pieces (80 g),80,160,5.0,4.5,26.0,2.0,3.5,450,snack,Steamed fermented gram flour cake - lower fat than fried snacks
+86,Bhel puri,bhel puri|bhelpuri|jhal muri,,Snacks & street food,vegan,1 plate (150 g),150,180,4.5,6.0,28.0,3.0,4.5,520,snack|high_sodium,Puffed rice with chutneys - salt varies a lot
+87,Pani puri (with water),pani puri|golgappa|puchka,,Snacks & street food,vegan,6 pieces (120 g),120,160,3.0,6.0,24.0,2.0,2.5,600,fried|snack|high_sodium,Semolina shells filled with spiced water
+88,Kachori (fried),kachori|dal kachori|raj kachori,,Snacks & street food,vegan,1 kachori (60 g),60,350,6.0,18.0,42.0,3.0,2.0,450,fried|snack,Deep-fried stuffed pastry
+89,Pav bhaji,pav bhaji|bhaji pav,,Snacks & street food,vegetarian,1 plate (300 g),300,150,3.5,7.0,18.0,3.0,4.0,520,,Mashed vegetable curry with buttered bread rolls
+90,Chole bhature,chole bhature|chole bhatoora,,Snacks & street food,vegetarian,1 plate (250 g),250,330,8.0,15.0,42.0,5.0,2.5,550,fried|legume,Chickpea curry with deep-fried bread
+91,Momos (steamed veg),momos|momo|steamed dumplings,dumplings,Snacks & street food,vegan,6 pieces (180 g),180,130,4.0,2.5,23.0,2.0,1.5,350,,Steamed dumplings with a vegetable filling
+92,Aloo tikki (fried),aloo tikki|potato patty|tikki,,Snacks & street food,vegan,1 tikki (80 g),80,260,3.5,14.0,30.0,2.8,1.5,400,fried|snack,Shallow-fried potato patty
+93,Bread pakora,bread pakora|bread pakoda,,Snacks & street food,vegetarian,1 piece (90 g),90,300,6.5,17.0,30.0,2.5,2.0,550,fried|snack,Potato-stuffed bread fritter
+94,French fries,fries|french fries|potato fries,french_fries,Snacks & street food,vegan,1 medium (120 g),120,312,3.4,15.0,41.0,3.8,0.3,210,fried|processed,Deep-fried potato strips
+95,Pizza (veg cheese),pizza|cheese pizza|veg pizza,pizza,Snacks & street food,vegetarian,2 slices (200 g),200,260,11.0,10.0,32.0,2.2,3.5,600,processed,Cheese pizza - salt and saturated fat are the main watch-outs
+96,Pasta (with sauce),pasta|penne|macaroni|spaghetti,spaghetti_bolognese|spaghetti_carbonara,Snacks & street food,vegetarian,1 bowl (250 g),250,150,4.5,5.0,22.0,2.0,4.0,400,processed,Restaurant versions may contain meat or extra cheese
+97,Macaroni and cheese,macaroni and cheese|cheesy pasta,macaroni_and_cheese,Snacks & street food,vegetarian,1 bowl (250 g),250,170,7.0,8.0,18.0,0.9,2.5,500,processed,Cheese sauce pasta
+98,Caesar salad (with dressing),caesar salad|salad with dressing,caesar_salad,Vegetable dishes,vegetarian,1 bowl (200 g),200,190,6.0,15.0,8.0,1.8,3.0,500,raw,Lettuce with a rich dressing and croutons
+99,Banana,banana|kela,,Fruits & raw foods,vegan,1 medium (110 g),110,89,1.1,0.3,22.8,2.6,12.2,1,raw|fruit|natural_sugar,Quick carbohydrate source; contains potassium
+100,Apple,apple|seb,,Fruits & raw foods,vegan,1 medium (180 g),180,52,0.3,0.2,13.8,2.4,10.4,1,raw|fruit|natural_sugar,Eat with the skin for the fibre
+101,Mango,mango|aam,,Fruits & raw foods,vegan,1 medium (200 g),200,60,0.8,0.4,15.0,1.6,13.7,1,raw|fruit|natural_sugar,Seasonal fruit - natural sugars
+102,Papaya,papaya|papita,,Fruits & raw foods,vegan,1 cup (150 g),150,43,0.5,0.3,11.0,1.7,7.8,8,raw|fruit|natural_sugar,Good source of vitamin A and digestive enzymes
+103,Guava,guava|amrood|peru,,Fruits & raw foods,vegan,1 medium (150 g),150,68,2.6,1.0,14.0,5.4,8.9,2,raw|fruit|natural_sugar,Very high fibre and vitamin C for a fruit
+104,Orange,orange|santra|mosambi,,Fruits & raw foods,vegan,1 medium (150 g),150,47,0.9,0.1,11.8,2.4,9.4,0,raw|fruit|natural_sugar,Vitamin C rich citrus
+105,Grapes,grapes|angoor,,Fruits & raw foods,vegan,1 cup (150 g),150,69,0.7,0.2,18.0,0.9,15.5,2,raw|fruit|natural_sugar,Mostly simple sugars
+106,Watermelon,watermelon|tarbooz,,Fruits & raw foods,vegan,1 slice (250 g),250,30,0.6,0.2,7.6,0.4,6.2,1,raw|fruit|natural_sugar,Very high water content - low calorie
+107,Pomegranate,pomegranate|anar,,Fruits & raw foods,vegan,1 cup (150 g),150,83,1.7,1.2,18.7,4.0,13.7,3,raw|fruit|natural_sugar,Antioxidant rich with useful fibre
+108,Chikoo (sapota),chikoo|sapota|sapodilla,,Fruits & raw foods,vegan,1 medium (100 g),100,83,0.4,1.1,20.0,5.3,8.0,,raw|fruit|natural_sugar,Sweet tropical fruit - fibre content is surprisingly high
+109,Almonds,almonds|badam,,Nuts & seeds,vegan,10 pieces (12 g),12,579,21.0,50.0,22.0,12.5,4.4,,raw|nuts,High in healthy fats and vitamin E - portion size matters
+110,Walnuts,walnuts|akhrot,,Nuts & seeds,vegan,4 halves (10 g),10,654,15.0,65.0,14.0,6.7,2.6,,raw|nuts,Plant omega-3 source
+111,Cashews,cashews|kaju,,Nuts & seeds,vegan,10 pieces (15 g),15,553,18.0,44.0,30.0,3.3,5.9,,nuts,Used in many Indian gravies and sweets
+112,Roasted chana,roasted chana|bhuna chana|roasted gram,,Nuts & seeds,vegan,1 handful (30 g),30,360,19.0,5.0,58.0,15.0,2.0,20,legume|high_fibre,Cheap high-protein snack
+113,Masala peanuts,masala peanuts|peanut masala|spiced peanuts,,Nuts & seeds,vegan,1 handful (30 g),30,450,20.0,32.0,18.0,7.5,4.0,450,fried|nuts,Peanuts fried with gram flour and spices
+114,Papad (roasted),papad|poppadom|appalam,,Snacks & street food,vegan,1 papad (15 g),15,370,22.0,5.0,60.0,12.0,1.0,1500,high_sodium,Extremely high in salt - usually one is enough
+115,Tea (with milk and sugar),tea|chai|masala chai|milk tea,,Beverages,vegetarian,1 cup (150 ml),150,40,0.9,0.9,6.0,0.0,5.5,10,beverage|high_sugar,Values per 100 ml with milk and sugar
+116,Coffee (with milk and sugar),coffee|milk coffee,,Beverages,vegetarian,1 cup (150 ml),150,45,0.9,1.0,6.5,0.0,6.0,12,beverage|high_sugar,Values per 100 ml with milk and sugar
+117,Nimbu pani (sweet lemon water),nimbu pani|lemon water|shikanji,,Beverages,vegan,1 glass (250 ml),250,30,0.1,0.0,7.5,0.1,7.0,40,beverage|high_sugar,Lemon juice with sugar and salt
+118,Mango shake,mango shake|mango milkshake,,Beverages,vegetarian,1 glass (250 ml),250,90,1.5,2.0,16.0,0.5,14.0,30,beverage|high_sugar,Milk blended with mango and sugar
+119,Sugarcane juice,sugarcane juice|ganne ka ras,,Beverages,vegan,1 glass (250 ml),250,55,0.2,0.1,13.5,0.1,13.0,5,beverage|high_sugar,Almost entirely simple sugar
+120,Coconut water,coconut water|nariyal pani,,Beverages,vegan,1 glass (250 ml),250,19,0.7,0.2,3.7,1.1,2.6,105,beverage|raw|natural_sugar,Natural electrolytes with modest sugar
+121,Cola (soft drink),cola|soft drink|cold drink|soda,,Beverages,vegan,1 can (330 ml),330,42,0.0,0.0,10.6,0.0,10.6,4,beverage|high_sugar|processed,Values per 100 ml - empty calories
+122,Gulab jamun,gulab jamun|gulab jamoon,,Sweets & desserts,vegetarian,1 piece (40 g),40,340,4.0,12.0,55.0,0.4,45.0,60,sweet|fried,Milk dumpling soaked in sugar syrup
+123,Jalebi,jalebi|jilebi,,Sweets & desserts,vegetarian,1 piece (30 g),30,400,2.0,15.0,65.0,0.5,50.0,50,sweet|fried,Deep-fried batter in sugar syrup
+124,Rasgulla,rasgulla|rosogolla,,Sweets & desserts,vegetarian,1 piece (50 g),50,190,3.0,4.0,36.0,0.0,32.0,40,sweet,Cottage cheese ball in light syrup
+125,Gajar halwa,gajar halwa|gajar ka halwa|carrot halwa,,Sweets & desserts,vegetarian,1 katori (100 g),100,250,3.5,11.0,35.0,2.0,28.0,90,sweet,Carrot pudding with ghee milk and sugar
+126,Kheer (rice),kheer|rice kheer|payasam,,Sweets & desserts,vegetarian,1 katori (150 g),150,145,3.0,4.5,23.0,0.3,16.0,60,sweet,Milk pudding - calories come from milk sugar and rice
+127,Besan ladoo,besan ladoo|ladoo|laddu,,Sweets & desserts,vegetarian,1 piece (40 g),40,420,6.5,18.0,60.0,4.0,40.0,40,sweet,Gram flour sweet with ghee
+128,Ice cream (vanilla),ice cream|vanilla ice cream,ice_cream,Sweets & desserts,vegetarian,1 scoop (60 g),60,207,3.5,11.0,24.0,0.7,21.0,80,sweet|processed,Milk based frozen dessert
+129,Cake (chocolate bakery),chocolate cake|cake,chocolate_cake|red_velvet_cake|cup_cakes,Sweets & desserts,vegetarian,1 slice (80 g),80,350,5.0,16.0,48.0,1.5,32.0,300,sweet|processed,Bakery cake with frosting
+130,Doughnut,doughnut|donut|dohnut,donuts,Sweets & desserts,vegetarian,1 doughnut (60 g),60,400,5.0,22.0,48.0,1.5,24.0,350,sweet|fried,Deep-fried sweet dough
+131,Cheesecake,cheesecake,cheesecake,Sweets & desserts,vegetarian,1 slice (100 g),100,320,5.5,22.0,26.0,0.4,21.0,280,sweet|processed,Baked cream cheese dessert
+132,Sambar rice,sambar rice|sambar sadam,,Cereals & grains,vegan,1 plate (300 g),300,120,4.0,2.5,20.0,2.0,1.5,350,legume,Rice mixed with sambar - a complete one-bowl meal
+133,Vegetable soup,vegetable soup|veg soup|clear soup,,Vegetable dishes,vegan,1 bowl (250 g),250,40,1.5,1.5,5.0,1.5,2.0,400,,Light broth with vegetables
+134,Chicken soup,chicken soup|chicken clear soup|shorba,,Meat & fish,non_vegetarian,1 bowl (250 g),250,55,5.0,2.0,4.0,0.5,1.0,480,,Clear chicken broth

@@ -1,0 +1,68 @@
+# NutriVision AI — dependencies installed so far
+# Packages are added in the phase that actually uses them.
+
+# --------------------------------------------------------------------------- #
+# Web application / UI
+# --------------------------------------------------------------------------- #
+streamlit>=1.38,<2.0
+
+# --------------------------------------------------------------------------- #
+# Data processing
+# --------------------------------------------------------------------------- #
+pandas>=2.1,<3.0           # used from Phase 4 (nutrition engine, PNIE features)
+numpy>=1.26,<3.0           # used from Phase 3 (preprocessing) onwards
+Pillow>=10.0               # image decoding / preprocessing (Phase 3)
+
+# --------------------------------------------------------------------------- #
+# Phase 2 — database
+# --------------------------------------------------------------------------- #
+SQLAlchemy>=2.0,<2.1
+psycopg2-binary>=2.9       # PostgreSQL driver used by Neon
+# alembic>=1.13            # optional: versioned migrations instead of init_db.py --reset
+
+# --------------------------------------------------------------------------- #
+# Phase 3 — food image recognition
+# --------------------------------------------------------------------------- #
+# The repository ships a verified ONNX model in assets/models/ (9.4 MB FP32,
+# 2.5 MB INT8), so ONLY onnxruntime is needed to run recognition.
+onnxruntime>=1.17
+
+# PyTorch is optional: it is required only if you (a) want the torch backend
+# because you do not have an ONNX file, or (b) want to re-export the ONNX model:
+#
+#     pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+#     python -m food_recognition.export_onnx --quantize --out assets/models
+#
+# Install the CPU wheels (the command above) — the default PyPI Linux wheels pull
+# ~2.5 GB of CUDA libraries that this project never uses.
+
+# --------------------------------------------------------------------------- #
+# Phase 5 — dashboard & charts
+# --------------------------------------------------------------------------- #
+plotly>=5.20              # all dashboard, history and forecast charts
+
+# --------------------------------------------------------------------------- #
+# Phase 6 — PNIE (predictive nutrition intelligence engine)
+# --------------------------------------------------------------------------- #
+# One XGBoost regressor per user predicts next week's average daily calories.
+# The model is trained on demand from the user's own saved meals (milliseconds
+# for a handful of weekly rows), so no model file is shipped or downloaded.
+xgboost>=2.0
+
+# --------------------------------------------------------------------------- #
+# Phase 7 — Gemini 2.5 Flash AI coach
+# --------------------------------------------------------------------------- #
+# Optional feature: without an API key the app runs exactly as before and the
+# AI Coach page explains how to configure one. The coach sends ONE text snapshot
+# per button press (no images, no name, no email).
+google-genai>=1.0
+
+# --------------------------------------------------------------------------- #
+# Local secrets management (.env file)
+# --------------------------------------------------------------------------- #
+python-dotenv>=1.0
+
+# --------------------------------------------------------------------------- #
+# Testing
+# --------------------------------------------------------------------------- #
+pytest>=8.0

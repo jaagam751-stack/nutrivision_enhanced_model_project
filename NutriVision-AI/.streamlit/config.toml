@@ -1,0 +1,19 @@
+# Streamlit configuration for NutriVision AI (Phase 1)
+# Docs: https://docs.streamlit.io/develop/api-reference/configuration/config.toml
+
+[theme]
+base = "dark"
+primaryColor = "#7C5CFF"
+backgroundColor = "#0B0F19"
+secondaryBackgroundColor = "#141A29"
+textColor = "#E8ECF5"
+font = "sans serif"
+
+[server]
+headless = true
+address = "0.0.0.0"
+port = 8501
+maxUploadSize = 10
+
+[browser]
+gatherUsageStats = false

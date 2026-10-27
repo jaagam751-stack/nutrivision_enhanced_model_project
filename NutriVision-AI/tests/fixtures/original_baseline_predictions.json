@@ -1,0 +1,74 @@
+{
+ "margherita-pizza-whole-food-photo-1.jpg": {
+  "label": "sushi",
+  "confidence": 41.47,
+  "alts": [
+   [
+    "Sushi",
+    41.47
+   ],
+   [
+    "Cheesecake",
+    16.49
+   ],
+   [
+    "Cannoli",
+    12.12
+   ]
+  ]
+ },
+ "margherita-pizza-whole-food-photo-2.jpg": {
+  "label": "bruschetta",
+  "confidence": 47.93,
+  "alts": [
+   [
+    "Bruschetta",
+    47.93
+   ],
+   [
+    "Pizza",
+    34.83
+   ],
+   [
+    "Beef carpaccio",
+    7.52
+   ]
+  ]
+ },
+ "plate-of-samosa-indian-snack-food-photo-1.jpg": {
+  "label": "chicken_wings",
+  "confidence": 11.14,
+  "alts": [
+   [
+    "Chicken wings",
+    11.14
+   ],
+   [
+    "Gnocchi",
+    10.78
+   ],
+   [
+    "Ceviche",
+    7.48
+   ]
+  ]
+ },
+ "plate-of-samosa-indian-snack-food-photo-2.jpg": {
+  "label": "samosa",
+  "confidence": 66.52,
+  "alts": [
+   [
+    "Samosa",
+    66.52
+   ],
+   [
+    "Spring rolls",
+    32.47
+   ],
+   [
+    "Breakfast Burrito",
+    0.38
+   ]
+  ]
+ }
+}

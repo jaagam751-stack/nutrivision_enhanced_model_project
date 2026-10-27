@@ -1,0 +1,71 @@
+# ============================ Secrets =======================================
+# Never commit real secrets. Keep `.env.example` committed and `.env` private.
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# ============================ Python ========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ============================ Virtual envs ==================================
+.venv/
+venv/
+ENV/
+env/
+
+# ============================ Tooling caches ================================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+coverage/
+.coverage
+htmlcov/
+
+# ============================ Model & data cache ============================
+# Downloaded pretrained weights and caches must not be pushed.
+.cache/
+models_cache/
+*.h5
+*.keras
+*.pt
+*.pth
+*.tflite
+*.safetensors
+
+# EXCEPTION: the small, verified ONNX export of the Food-101 model is shipped
+# with the project on purpose (9.4 MB FP32 / 2.5 MB INT8, Apache-2.0). Shipping
+# it means the app runs with onnxruntime only — no 2 GB PyTorch install.
+*.onnx
+!assets/models/*.onnx
+
+# Local SQLite development fallback database (PostgreSQL is the project DB).
+*.db
+*.sqlite
+*.sqlite3
+
+# Uploaded images are never stored permanently; ignore any accidental output.
+uploads/
+tmp/
+*.log
+
+# ============================ Editors / OS ==================================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ============================ Enhanced model ================================
+# Keep code, configs and results in git; keep datasets and large weights out.
+datasets/
+enhanced_model/checkpoints/*.pt
+# The exported ONNX checkpoint (~16 MB) is meant to be committed or shipped with a release.

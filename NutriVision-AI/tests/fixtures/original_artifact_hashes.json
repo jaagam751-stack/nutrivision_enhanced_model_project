@@ -1,0 +1,10 @@
+{
+ "assets/models/mobilenet_v2_food101.onnx": "ba2915c62b4272e6a2024e520bbc29e7f7ff79db03a0cea5b84e3727b2f1d6b7",
+ "assets/models/mobilenet_v2_food101_int8.onnx": "f6a80ef2d98158e4ab737d6e8d5b8364157c2ea6c28691901a31ccc4e8af45f8",
+ "food_recognition/__init__.py": "c1ee8372c768aa7b9446891982926d62763eddee937f6250dfe8edc109a6c8b9",
+ "food_recognition/export_onnx.py": "700c4475ca0ff43b166aaad9b2b2e7a6aad011640f4cfc538652960d28fdcaf5",
+ "food_recognition/food101_classes.json": "92d5cd07a7856279655bc77e852337ad501f98c8a0e8cee7c969c304a6b19255",
+ "food_recognition/model_loader.py": "d5ab3287d91ce412daa6807d3547582426d0cd16c82ee7efe2400e2beee0a94f",
+ "food_recognition/predictor.py": "15081fe738b6a0219d04117115949c744988cb751834683fdec7ec45ef3c9ba1",
+ "food_recognition/preprocessing.py": "a097a93faa25e15e0f9ee4abd98bca86a714c95602b8991111cef3b38d106ffd"
+}
