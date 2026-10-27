@@ -1,70 +1,52 @@
+<div align="center">
+
 # 🥗 NutriVision AI
 
 ### AI-Powered Food Recognition & Predictive Nutrition Analysis
 
-NutriVision AI is a final-year / NSP project that turns a food photo
-into practical nutrition insights. It combines food-image
-classification, a curated Indian-food nutrition dataset, meal tracking,
-calorie-trend forecasting, and optional AI-generated wellness coaching
-in a Streamlit application.
+Snap a photo of your meal and get instant nutrition insights, calorie trends, and AI-powered wellness coaching.
 
-> **Project status:** Phases 1--8 are marked complete in the project
-> documentation. Model outputs and nutrition values are estimates, and
-> the app clearly identifies important limitations.
+[![Python](https://img.shields.io/badge/Python-3.10--3.12-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![PyTorch](https://img.shields.io/badge/MobileNetV2-Food--101-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![XGBoost](https://img.shields.io/badge/Forecasting-XGBoost-189FDD)](https://xgboost.ai/)
+[![Gemini](https://img.shields.io/badge/AI%20Coach-Gemini-8E75B2?logo=googlegemini&logoColor=white)](https://ai.google.dev/)
 
-## Table of contents
+<br>
 
--   [Highlights](#-highlights)
--   [How it works](#-how-it-works)
--   [Technology stack](#-technology-stack)
--   [Project structure](#-project-structure)
--   [Getting started](#-getting-started)
--   [Configuration and secrets](#-configuration-and-secrets)
--   [Database setup](#-database-setup)
--   [Run the application](#-run-the-application)
--   [Run tests](#-run-tests)
--   [Food recognition](#-food-recognition)
--   [Nutrition analysis](#-nutrition-analysis)
--   [Predictive Nutrition Intelligence
-    Engine](#-predictive-nutrition-intelligence-engine)
--   [Gemini AI Coach](#-gemini-ai-coach)
--   [Deployment](#-deployment)
--   [Limitations](#-limitations)
--   [Privacy and security](#-privacy-and-security)
--   [Disclaimer](#-disclaimer)
+### 🎬 [▶️ Watch the Demo Video](https://www.kapwing.com/videos/6ae05b5f02f50f708c1f6cc6)
+
+<sub>See NutriVision AI in action: food recognition, nutrition analysis, and forecasting.</sub>
+
+</div>
+
+---
+
+## 📖 Overview
+
+NutriVision AI is a final-year / NSP project that turns a food photo into practical nutrition insights. It combines food-image classification, a curated Indian-food nutrition dataset, meal tracking, calorie-trend forecasting, and optional AI-generated wellness coaching, all inside a Streamlit application.
+
+> **Project status:** Phases 1 to 8 are complete. Model outputs and nutrition values are estimates, and the app clearly identifies its limitations.
 
 ## ✨ Highlights
 
--   **Food image recognition:** Classifies an uploaded image with a
-    pretrained MobileNetV2 model trained on Food-101, displaying
-    confidence and a top-five shortlist.
--   **Indian-food nutrition data:** Uses a curated dataset of 134 foods
-    with estimated nutrition values per 100 g.
--   **Portion-aware calculations:** Scales nutrition estimates to the
-    selected portion and compares them with profile-based daily targets.
--   **Nutrition Health Score:** Calculates a transparent, rule-based
-    score from 0--100 and shows its component breakdown.
--   **Explicit meal saving:** Nothing is stored as a meal unless the
-    user presses **Save Meal**.
--   **Dashboard and history:** Displays daily totals, trends,
-    macronutrient charts, filters, and CSV export.
--   **Calorie trend forecasting:** Uses XGBoost to estimate the next
-    week's average daily calories when enough logged history is
-    available.
--   **Optional Gemini coaching:** Sends a limited, visible nutrition
-    snapshot to Gemini when the user explicitly requests a
-    recommendation.
--   **Profile management:** Supports profile review, updates, and
-    explicit data deletion.
--   **Testing and deployment guidance:** Includes unit tests and
-    deployment instructions for Streamlit Community Cloud.
+| Feature | What it does |
+|---|---|
+| 📸 **Food Recognition** | Classifies a photo with a MobileNetV2 model trained on Food-101, showing confidence and a top-five shortlist |
+| 🍛 **Indian Food Dataset** | Estimated nutrition for **134 foods** per 100 g, scaled to your portion |
+| 🏆 **Health Score** | Transparent, rule-based score from **0 to 100** with a component breakdown |
+| 💾 **Explicit Saving** | Nothing is stored until you press **Save Meal** |
+| 📊 **Dashboard & History** | Daily totals, trends, macronutrient charts, filters, and CSV export |
+| 🔮 **Calorie Forecasting** | XGBoost predicts your next week's average daily calories from logged history |
+| 🤖 **Gemini AI Coach** | Optional wellness tips, sent only when you request them |
+| 👤 **Profile Management** | Review, update, or explicitly delete your stored data |
 
-## 🔄 How it works
+## 🔄 How It Works
 
-``` text
+```text
 Food photo
    ↓
-Image validation and preprocessing
+Image validation & preprocessing
    ↓
 MobileNetV2 / Food-101 classification
    ↓
@@ -72,417 +54,272 @@ Top prediction + confidence + top-five shortlist
    ↓
 Food-name matching against nutrition dataset
    ↓
-Portion-based nutrition estimates + Health Score
+Portion-based estimates + Health Score
    ↓
-User explicitly saves meal
+You press "Save Meal"
    ↓
-Database → Dashboard / Meal History / PNIE forecast
-                         ↓
-             Optional Gemini AI Coach
+Database → Dashboard / Meal History / PNIE Forecast
+                              ↓
+                  Optional Gemini AI Coach
 ```
 
-The food classifier predicts a single dominant dish; it is not a
-multi-item detector. The app asks users to confirm uncertain food
-matches rather than presenting every prediction as certain.
+> The classifier predicts a single dominant dish, not every item on a plate. Uncertain matches are shown for you to confirm.
 
-## 🧰 Technology stack
+## 🧰 Tech Stack
 
-  -----------------------------------------------------------------------
-  Area                                Technologies
-  ----------------------------------- -----------------------------------
-  User interface                      Python, Streamlit, custom CSS
+| Area | Technologies |
+|---|---|
+| 🖥️ **Interface** | Python, Streamlit, custom CSS |
+| 🧠 **Food Recognition** | MobileNetV2, Food-101, ONNX Runtime (optional PyTorch backend) |
+| 📈 **Data & Charts** | Pandas, NumPy, Plotly, curated CSV dataset |
+| 🔮 **Forecasting** | XGBoost |
+| 🗄️ **Database** | SQLAlchemy, Neon PostgreSQL (SQLite for local development) |
+| 🤖 **AI Coaching** | Google Gemini API (optional) |
+| 🧪 **Testing** | pytest, Streamlit AppTest |
+| ⚙️ **Configuration** | Environment variables, `.env`, Streamlit secrets |
 
-  Food recognition                    MobileNetV2, Food-101, ONNX Runtime
-                                      (optional PyTorch backend)
+## 📁 Project Structure
 
-  Data processing                     Pandas, NumPy
-
-  Nutrition and charts                Curated CSV dataset, Plotly
-
-  Forecasting                         XGBoost
-
-  Database                            SQLAlchemy, Neon PostgreSQL; SQLite
-                                      for local development
-
-  AI coaching                         Google Gemini API (optional)
-
-  Testing                             pytest, Streamlit AppTest
-
-  Configuration                       Environment variables, `.env`,
-                                      Streamlit secrets
-  -----------------------------------------------------------------------
-
-## 📁 Project structure
-
-``` text
+```text
 NutriVision-AI/
-├── app.py
-├── config.py
-├── requirements.txt
-├── requirements-training.txt
-├── README.md
-├── RUN_GUIDE.md
-├── .env.example
-├── .gitignore
-├── .streamlit/
-│   └── config.toml
-├── ai/
-│   └── gemini_coach.py
-├── assets/
-│   ├── style.css
-│   └── models/
-│       ├── mobilenet_v2_food101.onnx
-│       └── mobilenet_v2_food101_int8.onnx
-├── database/
-│   ├── connection.py
-│   ├── init_db.py
-│   └── repository.py
-├── food_recognition/
-│   ├── export_onnx.py
-│   ├── food101_classes.json
-│   ├── model_loader.py
-│   ├── predictor.py
-│   └── preprocessing.py
-├── models/
-│   ├── base.py
-│   ├── meal.py
-│   ├── prediction.py
-│   ├── recommendation.py
-│   └── user.py
-├── nutrition/
-│   ├── food_nutrition.csv
-│   ├── health_score.py
-│   └── nutrition_engine.py
-├── pages/
-│   ├── 1_Dashboard.py
-│   ├── 2_Upload_Meal.py
-│   ├── 3_Meal_History.py
-│   ├── 4_Predictions.py
-│   ├── 5_AI_Coach.py
-│   └── 6_Profile.py
-├── pnie/
-│   ├── feature_engineering.py
-│   ├── pnie_engine.py
-│   ├── predictor.py
-│   └── trend_analysis.py
-├── tests/
-└── utils/
+├── app.py                  # Streamlit entry point
+├── config.py               # Configuration layer
+├── ai/                     # Gemini AI coach
+├── assets/                 # CSS and ONNX model files
+├── database/               # Connection, setup, and repository layer
+├── food_recognition/       # Model loading, preprocessing, prediction
+├── models/                 # Data models (user, meal, prediction, recommendation)
+├── nutrition/              # Nutrition dataset, engine, and health score
+├── pages/                  # Dashboard, Upload, History, Predictions, Coach, Profile
+├── pnie/                   # Predictive Nutrition Intelligence Engine
+├── tests/                  # Unit and end-to-end tests
+└── utils/                  # Helpers
 ```
 
-## 🚀 Getting started
+## 🚀 Getting Started
 
 ### Prerequisites
 
--   Python 3.10--3.12 is recommended; use the version supported by the
-    installed dependencies.
--   Git
--   A Google Gemini API key only if you want to use AI coaching.
--   A Neon PostgreSQL database for persistent hosted use. SQLite is
-    available for local development.
+- **Python 3.10 to 3.12** (use the version supported by your installed dependencies)
+- **Git**
+- A **Google Gemini API key** (only for AI coaching)
+- A **Neon PostgreSQL** database for persistent hosted use (SQLite works locally)
 
-### 1. Clone the repository
+### 1️⃣ Clone the repository
 
-``` bash
+```bash
 git clone https://github.com/jaagam751-stack/nutrivision_enhanced_model_project.git
 cd nutrivision_enhanced_model_project/NutriVision-AI
 ```
 
-### 2. Create and activate a virtual environment
+### 2️⃣ Create and activate a virtual environment
 
-**Windows PowerShell**
+**Windows (PowerShell)**
 
-``` powershell
+```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
 **macOS / Linux**
 
-``` bash
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-### 3. Install dependencies
+### 3️⃣ Install dependencies
 
-``` bash
+```bash
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-If you are only preparing datasets or training/exporting models, consult
-`requirements-training.txt` for the additional packages. Avoid
-installing the training stack unless you need it.
+> Only need to prepare datasets or train models? See `requirements-training.txt`. Skip the training stack otherwise.
 
-## 🔐 Configuration and secrets
+## 🔐 Configuration
 
 Copy the example environment file:
 
-**Windows PowerShell**
-
-``` powershell
-Copy-Item .env.example .env
-```
-
-**macOS / Linux**
-
-``` bash
+```bash
+# Windows PowerShell: Copy-Item .env.example .env
 cp .env.example .env
 ```
 
-Edit `.env` and set the values you need:
+Set the values you need in `.env`:
 
-``` dotenv
+```dotenv
 DATABASE_URL=postgresql+psycopg2://USER:PASSWORD@HOST/DATABASE?sslmode=require
 GEMINI_API_KEY=your-gemini-api-key
 ```
 
--   `DATABASE_URL` is required for a persistent PostgreSQL deployment.
--   `GEMINI_API_KEY` is optional; without it, the rest of the app can
-    still be used, while AI coaching is unavailable.
--   Never commit `.env`, database credentials, API keys, or Streamlit
-    secrets to GitHub.
+| Variable | Required? | Purpose |
+|---|---|---|
+| `DATABASE_URL` | For persistent PostgreSQL | Neon/PostgreSQL connection string |
+| `GEMINI_API_KEY` | Optional | Enables AI Coach. Get one from [Google AI Studio](https://aistudio.google.com/app/apikey) |
 
-Create a Gemini key through [Google AI
-Studio](https://aistudio.google.com/app/apikey). The app should read
-secrets through its configuration layer rather than hard-coding them in
-source files.
+> 🔒 **Never commit** `.env`, database credentials, API keys, or `.streamlit/secrets.toml` to GitHub.
 
-## 🗄️ Database setup
+## 🗄️ Database Setup
 
 ### Option A: Neon PostgreSQL (recommended for deployment)
 
-1.  Create a project at [Neon](https://neon.tech).
-2.  Copy its connection string from the Neon dashboard.
-3.  Put the connection string in `DATABASE_URL` in `.env`.
-4.  From the `NutriVision-AI` directory, verify the connection and
-    create the tables:
+1. Create a project at [Neon](https://neon.tech).
+2. Copy the connection string from the Neon dashboard.
+3. Put it in `DATABASE_URL` inside `.env`.
+4. Verify the connection and create the tables:
 
-``` bash
+```bash
 python database/init_db.py --check
 python database/init_db.py
 ```
 
-The application uses SQLAlchemy to manage the `users`, `meals`,
-`predictions`, and `recommendations` tables.
-
 ### Option B: SQLite for local development
 
-SQLite can be used for local development and demos without a hosted
-database:
-
-``` bash
+```bash
 python database/init_db.py --sqlite --sample-data
 ```
 
-Keep in mind that a local SQLite file is not suitable for persistent
-production data on Streamlit Community Cloud.
+> A local SQLite file is not suitable for persistent production data on Streamlit Community Cloud.
 
 ### Optional sample data
 
-``` bash
+```bash
 python database/init_db.py --sample-data
 ```
 
-This creates clearly flagged demonstration data for exploring dashboard
-and forecasting features. Do not use reset commands against a database
-containing data you need.
+This creates clearly flagged demo data for exploring the dashboard and forecasts.
 
-> **Warning:** `python database/init_db.py --reset --yes` drops and
-> recreates tables and can destroy stored data. Use it only on a
-> disposable development database.
+> ⚠️ **Warning:** `python database/init_db.py --reset --yes` drops and recreates tables and can destroy stored data. Use it only on a disposable development database.
 
-## ▶️ Run the application
+## ▶️ Run the Application
 
-Run from the `NutriVision-AI` directory:
+From the `NutriVision-AI` directory:
 
-``` bash
+```bash
 streamlit run app.py
 ```
 
-Streamlit will print a local URL, usually `http://localhost:8501`.
+Open the local URL Streamlit prints, usually **http://localhost:8501**.
 
-Typical workflow:
+### 🧭 Typical Workflow
 
-1.  Create or load a profile.
-2.  Open **Upload Meal** and upload a JPG, JPEG, or PNG image.
-3.  Review the prediction, shortlist, nutrition match, portion, and
-    estimated nutrition values.
-4.  Press **Save Meal** only when you want to store the meal.
-5.  Explore **Dashboard** and **Meal History**.
-6.  Open **Predictions** after enough meal history has been recorded.
-7.  Configure a Gemini API key and open **AI Coach** if you want an
-    AI-generated recommendation.
-8.  Use **Profile & data** to review profile values and manage stored
-    records.
+1. **Create or load** a profile.
+2. Open **Upload Meal** and upload a JPG, JPEG, or PNG.
+3. Review the prediction, shortlist, nutrition match, portion, and estimates.
+4. Press **Save Meal** only when you want to store it.
+5. Explore the **Dashboard** and **Meal History**.
+6. Open **Predictions** once enough history exists.
+7. Add a Gemini key and open **AI Coach** for a recommendation.
+8. Use **Profile & Data** to review or manage your records.
 
-## 🧪 Run tests
+## 🧪 Run Tests
 
-Run the unit test suite from the project directory:
-
-``` bash
+```bash
 pytest -v
 ```
 
-The project documentation describes tests for profile validation,
-database/repository behaviour, food recognition, nutrition calculations,
-health scoring, analytics, PNIE, Gemini coach error handling, and
-profile data operations. Check the current test output for the actual
-pass count and failures; counts can change as the project evolves.
+Tests cover profile validation, database operations, food recognition, nutrition calculations, health scoring, analytics, PNIE, Gemini error handling, and profile data operations.
 
-Some Streamlit end-to-end scripts are run separately:
+End-to-end Streamlit tests run separately:
 
-``` bash
+```bash
 python tests/e2e_phase7_apptest.py
 python tests/e2e_phase8_apptest.py
 ```
 
-These scripts may expect a configured development database and suitable
-sample data. Use a disposable local database when testing flows that
-write or delete records.
+> These may write or delete records, so run them against a disposable local database.
 
-## 🍽️ Food recognition
+## 🍽️ Food Recognition
 
-The app uses a MobileNetV2 classifier trained on Food-101. It returns a
-predicted class, confidence information, and a top-five shortlist. ONNX
-Runtime is the lightweight inference path; a PyTorch backend may be
-available for model development.
+- Uses a **MobileNetV2** classifier trained on **Food-101**
+- Returns a predicted class, confidence score, and top-five shortlist
+- **ONNX Runtime** is the lightweight inference path
 
-Important points:
+**Keep in mind:**
 
--   The model classifies one dominant food item per image; it does not
-    detect every item on a mixed plate.
--   Food-101 does not cover every Indian home-cooked dish. Dal, chapati,
-    idli, poha, and paneer dishes may be mapped to a visually similar
-    class.
--   Confidence is the model's score, not a guarantee of correctness.
--   Confirm uncertain predictions and nutrition matches before saving.
--   Uploaded photos are processed in memory according to the project
-    design and are not intended to be stored as meal records.
+- Classifies **one dominant food item** per image, not every item on a mixed plate
+- Food-101 doesn't cover every Indian home-cooked dish. Dal, chapati, idli, poha, and paneer dishes may map to a visually similar class
+- Confidence is the model's score, not a guarantee
+- Uploaded photos are processed in memory and are not stored as meal records
 
-Optional model export tools and backend settings are documented in
-`food_recognition/export_onnx.py` and `RUN_GUIDE.md`. Use those
-instructions if you need to rebuild or troubleshoot model artifacts.
+## 🥦 Nutrition Analysis
 
-## 🥦 Nutrition analysis
+The `nutrition/food_nutrition.csv` dataset documents **134 foods** with typical nutrient values per 100 g. The engine matches the predicted label to a dataset entry, scales values to your portion, and compares them with profile-based daily targets.
 
-The curated `nutrition/food_nutrition.csv` dataset documents 134 foods
-with typical nutrient values per 100 g. The nutrition engine matches the
-predicted food label to a dataset entry, scales values to the selected
-portion, and provides context against profile-based targets.
-
-The Nutrition Health Score is a transparent rule-based heuristic from
-0--100, not a clinical measure. Nutrition values vary by ingredients,
-recipe, cooking method, oil, salt, and serving size. The app should be
-treated as an estimation tool, not a substitute for weighing or
-laboratory analysis.
+The **Nutrition Health Score** is a rule-based heuristic from 0 to 100, not a clinical measure. Actual values vary with ingredients, recipe, cooking method, oil, salt, and serving size. Treat the app as an estimation tool, not a substitute for weighing or laboratory analysis.
 
 ## 📈 Predictive Nutrition Intelligence Engine (PNIE)
 
-PNIE uses an XGBoost regressor to estimate the user's average daily
-calorie intake for the next seven days from their saved meal history.
+PNIE uses an **XGBoost** regressor to estimate average daily calorie intake for the **next seven days** from your saved meal history.
 
--   Features are built from historical windows, with safeguards against
-    using future data.
--   Evaluation uses a chronological hold-out rather than a random split.
--   MAE/RMSE and a simple baseline are used to contextualise model
-    performance.
--   When history is too short or too sparse, the app should show
-    descriptive trends or explain why a forecast is unavailable instead
-    of fabricating a prediction.
--   Forecasts are stored only when the user explicitly selects the save
-    action.
+- Features come from historical windows, with safeguards against future data leakage
+- Evaluation uses a **chronological hold-out**, not a random split
+- MAE and RMSE are reported alongside a simple baseline
+- With too little or sparse history, the app shows descriptive trends or explains why a forecast is unavailable
+- Forecasts are stored only when you explicitly save them
 
-A forecast describes a pattern in recorded meals; it cannot predict
-future events or guarantee future calorie intake.
+> A forecast describes a pattern in your recorded meals. It cannot predict future events or guarantee future intake.
 
 ## 🤖 Gemini AI Coach
 
-The optional AI Coach uses Gemini to generate a short wellness-oriented
-message from a snapshot of the user's profile, saved-meal summaries, and
-available forecast information.
+The optional coach generates a short wellness-oriented message from a snapshot of your profile, saved-meal summaries, and forecast information.
 
--   The request is made only when the user presses the relevant button.
--   The app is designed to display the information included in the
-    request.
--   The user's name, food photos, database credentials, and other users'
-    records should not be included in the coach prompt.
--   Responses can be generic or inaccurate and are not medical advice.
--   Quota, network, configuration, and API errors may prevent a
-    response.
-
-Set `GEMINI_API_KEY` in `.env` locally or in Streamlit Community Cloud
-secrets for deployment. Keep API keys private.
+- Requests are made **only when you press the button**
+- The exact information sent is displayed in the app
+- Your name, food photos, database credentials, and other users' records are **not** included in the prompt
+- Responses can be generic or inaccurate and are **not medical advice**
 
 ## ☁️ Deployment
 
-The app can be deployed to [Streamlit Community
-Cloud](https://share.streamlit.io).
+Deploy to [Streamlit Community Cloud](https://share.streamlit.io):
 
-1.  Push the repository to GitHub.
-2.  Create a new app in Streamlit Community Cloud and select this
-    repository.
-3.  Set the app's **Main file path** to `NutriVision-AI/app.py` if
-    deploying from the repository root, or `app.py` if the app root is
-    set to `NutriVision-AI`.
-4.  Select a Python version compatible with the dependencies (Python
-    3.11 or 3.12 is recommended by the supplied project notes).
-5.  Add the required secrets under the app's settings.
+1. Push the repository to GitHub.
+2. Create a new app and select this repository.
+3. Set the **Main file path**:
+   - `NutriVision-AI/app.py` if deploying from the repository root
+   - `app.py` if the app root is set to `NutriVision-AI`
+4. Choose **Python 3.11 or 3.12**.
+5. Add secrets in the app settings:
 
-Example Streamlit secrets (TOML):
-
-``` toml
+```toml
 DATABASE_URL = "postgresql+psycopg2://USER:PASSWORD@HOST/DATABASE?sslmode=require"
 GEMINI_API_KEY = "your-gemini-api-key"
 ```
 
-Before deploying, verify that `.env`, local database files, personal
-data, and credentials are excluded from Git. Test the deployed app with
-a non-sensitive demo profile before using real information.
+Before deploying, confirm `.env`, local databases, personal data, and credentials are excluded from Git. Test with a non-sensitive demo profile first.
 
 ## ⚠️ Limitations
 
--   **No full authentication system:** profile selection is a project
-    convenience, not secure user authentication. Do not treat a public
-    deployment as a private health-data service.
--   **Single-item recognition:** mixed meals and multiple foods in one
-    photo are not independently detected.
--   **Dataset coverage:** the recognition classes and nutrition dataset
-    cannot represent every regional dish or recipe.
--   **Estimated values:** calories and nutrients are approximate and
-    depend on recipe and portion accuracy.
--   **Forecast uncertainty:** PNIE depends on consistent historical
-    logging and may be unavailable or unreliable with limited data.
--   **AI-generated text:** Gemini can produce incomplete, generic, or
-    inaccurate suggestions.
--   **Time handling:** the project documentation notes that meal-day
-    aggregation uses UTC rather than a per-user local timezone.
--   **Database operations:** schema creation does not automatically
-    migrate existing columns; use migrations or a carefully managed
-    development reset when schemas change.
+| Area | Limitation |
+|---|---|
+| 🔑 **Authentication** | Profile selection is a convenience, not secure login. Don't treat a public deployment as a private health-data service |
+| 🍱 **Recognition** | Mixed meals and multi-item photos aren't independently detected |
+| 🌏 **Coverage** | Classes and dataset can't represent every regional dish or recipe |
+| 📏 **Accuracy** | Calories and nutrients are approximate |
+| 🔮 **Forecasts** | Depend on consistent logging and may be unreliable with limited data |
+| 🤖 **AI text** | Gemini output may be incomplete, generic, or inaccurate |
+| 🕒 **Time** | Meal-day aggregation uses UTC, not per-user local time |
+| 🗃️ **Schema** | Table creation doesn't auto-migrate existing columns |
 
-## 🔒 Privacy and security
+## 🔒 Privacy & Security
 
--   Keep `.env`, API keys, database passwords, and
-    `.streamlit/secrets.toml` out of version control.
--   Review `.gitignore` before pushing model artifacts, local databases,
-    or generated data.
--   The app design does not require storing the original food photo as a
-    meal record; meal data is saved only after explicit user action.
--   Do not use the application to store sensitive personal information
-    in an unauthenticated public deployment.
--   If a secret has ever been committed to Git, removing it in a later
-    commit is not enough: revoke or rotate it.
+- Keep `.env`, API keys, database passwords, and `.streamlit/secrets.toml` out of version control
+- Review `.gitignore` before pushing model artifacts, local databases, or generated data
+- Meal data is saved only after an explicit user action
+- Don't store sensitive personal information in an unauthenticated public deployment
+- If a secret was ever committed, **rotate or revoke it**. Deleting it in a later commit isn't enough
 
 ## 📌 Disclaimer
 
-NutriVision AI provides general wellness information for educational and
-project-demonstration purposes. It does not diagnose, treat, cure, or
-prevent disease and is not a substitute for a qualified physician or
-dietitian. Nutrition figures are estimates, forecasts can be wrong, and
-AI-generated text may be inaccurate. Use professional advice for
-personal medical or dietary decisions.
+NutriVision AI provides general wellness information for educational and project-demonstration purposes. It does not diagnose, treat, cure, or prevent disease, and it is not a substitute for a qualified physician or dietitian. Nutrition figures are estimates, forecasts can be wrong, and AI-generated text may be inaccurate. Consult a professional for personal medical or dietary decisions.
 
-------------------------------------------------------------------------
+---
 
-**Built as a final-year / NSP project.**
+<div align="center">
+
+**🎬 [Watch the Demo](https://www.kapwing.com/videos/6ae05b5f02f50f708c1f6cc6)** · Built as a final-year / NSP project
+
+⭐ If you found this project useful, consider giving it a star!
+
+</div>
